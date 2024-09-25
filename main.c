@@ -253,39 +253,39 @@ void clearCart()
     }
 }
 
-void saveRecipt()
-{
-    char fileName[20];
-    int fileIndex = 1; // Starting index for file names
-    FILE *file;
+// void saveRecipt()
+// {
+//     char fileName[20];
+//     int fileIndex = 1; // Starting index for file names
+//     FILE *file;
 
-    // Loop to find an available file name
-    while (1)
-    {
-        sprintf(fileName, "./recept/file%d.txt", fileIndex);
-        file = fopen(fileName, "r");
-        if (file == NULL)
-        {
-            // File does not exist, this name is available
-            break;
-        }
-        fclose(file);
-        fileIndex++;
-    }
+//     // Loop to find an available file name
+//     while (1)
+//     {
+//         sprintf(fileName, "./recept/file%d.txt", fileIndex);
+//         file = fopen(fileName, "r");
+//         if (file == NULL)
+//         {
+//             // File does not exist, this name is available
+//             break;
+//         }
+//         fclose(file);
+//         fileIndex++;
+//     }
 
-    // Create and open the file
-    file = fopen(fileName, "w");
-    if (file == NULL)
-    {
-        perror("Error opening file");
-        return 1;
-    }
+//     // Create and open the file
+//     file = fopen(fileName, "w");
+//     if (file == NULL)
+//     {
+//         perror("Error opening file");
+//         return 1;
+//     }
 
-    // Write something to the file
-    // fprintf(file, "This is a test file named %s.\n", fileName);
+//     // Write something to the file
+//     // fprintf(file, "This is a test file named %s.\n", fileName);
 
-    // Close the file
-    fclose(file);
+//     // Close the file
+//     fclose(file);
 
-    // printf("File '%s' created successfully.\n", fileName);
-}
+//     // printf("File '%s' created successfully.\n", fileName);
+// }
